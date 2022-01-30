@@ -69,8 +69,10 @@ def game():
       elif len(guess) > 1:
          print("you entered more than one character, try again")
 
+       elif ValueError:                  # 01/30/22 added character validation
+         print("invalid character")
 
-
+    
 
       else:
 
