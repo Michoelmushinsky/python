@@ -5,7 +5,7 @@
 #  user has 10 tries to guess random
 #      word from words.txt
 #
-#        Version:  1.0
+#        Version:  1.1
 #
 #      Created:  01/12/22
 #
