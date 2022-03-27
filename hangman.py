@@ -71,7 +71,7 @@ def game():
          print("you entered more than one character, try again")
 
        elif ValueError:                  
-         print("invalid character") fbgv 
+         print("invalid character")  
 
     
 
