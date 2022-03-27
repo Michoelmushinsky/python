@@ -19,34 +19,35 @@ def game():
 
    print("Good Luck! " , name)
    time.sleep(1.0)
-   with open("words.txt") as file:
-      lines = file.readlines()
+   with open("words.txt") as file:       #opening words.txt
+      lines = file.readlines().    
       lines = [line.rstrip() for line in lines]
 
-   word = random.choice(lines)
+   word = random.choice(lines)           #chooses random word from words.txt
 
-   letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+   letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".  
 
    print("Guess the characters!")
-   chars_used = ''
+   chars_used = ''                       #records letters already used
 
-   turns = 10
+   turns = 10                            #number of choices decreases every round
    while turns > 0:
       failed = 0
-      preview = ""
+      preview = ""                       #preview of guessed word printed out every turn
 
       for x in word:
 
          if x in chars_used:
 
-            preview += x
+            preview += x                 #adds letter to 'preview' if letter is correct
 
          else:
-            preview += "_"
+            preview += "_"               #adds underscore if not correct
 
             failed += 1
-      print(" ".join(preview))
-      print("Letters you have not used yet: \n" + " ".join(letters))
+      print(" ".join(preview)).                                           #example prints 'H_E_L_ W_R_D ' because letters 'h,e,l,w,r,d' were chosen correctly
+      
+      print("Letters you have not used yet: \n" + " ".join(letters)).     #prints letters not used yet
 
       if failed == 0:
          print("You win!\nThe word is: " , word)
@@ -57,20 +58,20 @@ def game():
 
       for char in letters:
          if guess.capitalize() in letters:
-            letters = letters.replace(guess.capitalize(), "")
+            letters = letters.replace(guess.capitalize(), "").      #removes letters already guessed
 
 
 
 
 
-      if len(guess) < 1:
+      if len(guess) < 1:                                      # 01/30/22 added character validation
          print("please enter a character")
 
       elif len(guess) > 1:
          print("you entered more than one character, try again")
 
-       elif ValueError:                  # 01/30/22 added character validation
-         print("invalid character")
+       elif ValueError:                  
+         print("invalid character") fbgv 
 
     
 
@@ -89,12 +90,12 @@ def game():
 
 game()
 time.sleep(2.5)
-response = input("\nWould you like to play again? Y/N: ")
+response = input("\nWould you like to play again? Y/N: ").   #asks for rematch
 if response.capitalize() == "Y":
    time.sleep(0.3)
    game()
 
 else:
-   print("Thank you for playing!")
+   print("Thank you for playing!")    
 
 
